@@ -14,6 +14,7 @@ summarized banking statements.
    Endpoint: POST http://localhost:8080/users/register
    
  **Request Body:**
+ 
  {
  "username": "chiranjeevi",
  "email": "chiranjeevi@example.com",
@@ -34,8 +35,11 @@ summarized banking statements.
    
 **Request Parameters:**
    username (String): The username of the user
+   
    password (String): The password of the user
+   
      Example:
+     
          http://localhost:8080/users/login?username=chiranjeevu&password=passwordchiranjeevi@123
          
 **Response:**
@@ -49,7 +53,9 @@ summarized banking statements.
    
 **Request Path Variables:**
      id (Long): The ID of the user
+     
        Example:
+       
          http://localhost:8080/users/1
          
 **Response:**
@@ -110,7 +116,9 @@ summarized banking statements.
    
 **Request Path Variables:**
    id (Long): The ID of the company
+   
    Example:
+   
      http://localhost:8080/companies/1
      
 **Response:**
@@ -122,7 +130,9 @@ summarized banking statements.
 
 ## Get All Companies
    Endpoint: GET http://localhost:8080/companies/all
+   
    Example:
+   
      http://localhost:8080/companies/all
      
 **Response:**
@@ -160,8 +170,11 @@ summarized banking statements.
 
 **Request Path Variables:**
    Endpoint: GET http://localhost:8080/branches/{id}
+   
    id (Long): The ID of the branch
+   
    Example:
+   
      http://localhost:8080/branches/1
      
 **Response:**
@@ -180,7 +193,9 @@ summarized banking statements.
    
 **Request Path Variables:**
    companyId (Long): The ID of the company
+   
    Example:
+   
      http://localhost:8080/branches/company/1
      
 **Response:**
@@ -210,10 +225,15 @@ summarized banking statements.
    
 **Request Parameters:**
    ● userId (Long): The ID of the user
+   
    ● companyId (Long): The ID of the company
+   
    ● branchId (Long): The ID of the branch
+   
    ● transactionCount (int): The number of transactions to generate
+   
    ● deleteAfterUpload (boolean): Flag to delete the file after upload
+   
  
 **Example**:
  http://localhost:8080/statements/generate?userId=1&companyId=1&branchId=1&transactionCount=10&deleteAfterUpload=true
@@ -229,7 +249,9 @@ summarized banking statements.
  
 **Request Parameters:**
    key (String): The key of the file in S3
+   
    Example:
+   
      http://localhost:8080/statements/download?key=company_1_user_1_1234567890.csv
 
 **Response:**
@@ -243,7 +265,9 @@ summarized banking statements.
  
 **Request Parameters:**
    filePath (String): The path of the file to parse
+   
    Example:
+   
      http://localhost:8080/statements/parse?filePath=/path/to/file.csv
      
 **Response:**
