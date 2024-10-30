@@ -24,6 +24,7 @@ summarized banking statements.
  }
  
  **Response:**
+ 
  Success: User registered successfully!
  
  Failure: Company information is required or Company does not exist or User with username chiranjeevi already exists
@@ -38,6 +39,7 @@ summarized banking statements.
          http://localhost:8080/users/login?username=chiranjeevu&password=passwordchiranjeevi@123
          
 **Response:**
+
  Success: Login successful
  
  Failure: Invalid username or password.
@@ -51,6 +53,7 @@ summarized banking statements.
          http://localhost:8080/users/1
          
 **Response:**
+
  {
  "userId": 1,
  "username": "john_doe",
@@ -65,6 +68,7 @@ summarized banking statements.
    Endpoint: GET http://localhost:8080/users/all
    
  **Response:**
+ 
    [
      {
        "userId": 1,
@@ -96,6 +100,7 @@ summarized banking statements.
    }
    
 **Response:**
+
  Success: Company created successfully!
  
  Failure: Company with name 'New Company' already exists.
@@ -109,6 +114,7 @@ summarized banking statements.
      http://localhost:8080/companies/1
      
 **Response:**
+
    {
    "companyId": 1,
    "companyName": "Example Company
@@ -120,6 +126,7 @@ summarized banking statements.
      http://localhost:8080/companies/all
      
 **Response:**
+
  [
    {
    "companyId": 1,
@@ -144,6 +151,7 @@ summarized banking statements.
  }
  
 **Response:**
+
  Success: Branch created successfully!
  
  Failure: Company information is required or Company does not exist
@@ -157,6 +165,7 @@ summarized banking statements.
      http://localhost:8080/branches/1
      
 **Response:**
+
  {
    "branchId": 1,
    "branchName": "Example Branch",
@@ -175,6 +184,7 @@ summarized banking statements.
      http://localhost:8080/branches/company/1
      
 **Response:**
+
 [
    {
    "branchId": 1,
@@ -209,6 +219,7 @@ summarized banking statements.
  http://localhost:8080/statements/generate?userId=1&companyId=1&branchId=1&transactionCount=10&deleteAfterUpload=true
  
 **Response:**
+
  Success: URL of the uploaded file
  
  Failure: Error message
@@ -222,6 +233,7 @@ summarized banking statements.
      http://localhost:8080/statements/download?key=company_1_user_1_1234567890.csv
 
 **Response:**
+
  Success: Message indicating the file has been downloaded to the user's downloads folder
  
  Failure: Error message
@@ -235,6 +247,7 @@ summarized banking statements.
      http://localhost:8080/statements/parse?filePath=/path/to/file.csv
      
 **Response:**
+
  Success: Transactions parsed and saved successfully!
  
  Failure: Error message
