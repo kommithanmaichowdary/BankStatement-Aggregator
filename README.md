@@ -236,7 +236,8 @@ summarized banking statements.
    
  
 **Example**:
- http://localhost:8080/statements/generate?userId=1&companyId=1&branchId=1&transactionCount=10&deleteAfterUpload=true
+   
+    http://localhost:8080/statements/generate?userId=1&companyId=1&branchId=1&transactionCount=10&deleteAfterUpload=true
  
 **Response:**
 
