@@ -25,8 +25,8 @@ summarized banking statements.
  
  **Response:**
  Success: User registered successfully!
- Failure: Company information is required or Company does not exist or User with
- username chiranjeevi already exists
+ 
+ Failure: Company information is required or Company does not exist or User with username chiranjeevi already exists
 
 ## Login User
    Endpoint: POST http://localhost:8080/users/login
@@ -39,6 +39,7 @@ summarized banking statements.
          
 **Response:**
  Success: Login successful
+ 
  Failure: Invalid username or password.
 
 ## Get User by ID
@@ -96,6 +97,7 @@ summarized banking statements.
    
 **Response:**
  Success: Company created successfully!
+ 
  Failure: Company with name 'New Company' already exists.
 
 ## Get Company by ID
@@ -143,6 +145,7 @@ summarized banking statements.
  
 **Response:**
  Success: Branch created successfully!
+ 
  Failure: Company information is required or Company does not exist
 
 ## Get Branch by ID
@@ -207,6 +210,7 @@ summarized banking statements.
  
 **Response:**
  Success: URL of the uploaded file
+ 
  Failure: Error message
 
 ## Download Bank Statement
@@ -219,6 +223,7 @@ summarized banking statements.
 
 **Response:**
  Success: Message indicating the file has been downloaded to the user's downloads folder
+ 
  Failure: Error message
 
 ## Parse Bank Statement
@@ -231,5 +236,6 @@ summarized banking statements.
      
 **Response:**
  Success: Transactions parsed and saved successfully!
+ 
  Failure: Error message
 
